@@ -1,0 +1,27 @@
+{
+  "name": "marp-slide",
+  "version": "0.0.1",
+  "description": "VanillaJS Component for Marp and Tiny Slider",
+  "main": "marp-slide.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify ./marp-slide.js -o ./dist/marp-slide.min.js",
+    "start": "serve .",
+    "clean": "rm -rf yarn.lock"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CreatiCoding/marp-slide.git"
+  },
+  "author": "CreatiCoding",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CreatiCoding/marp-slide/issues"
+  },
+  "homepage": "https://github.com/CreatiCoding/marp-slide#readme",
+  "dependencies": {
+    "@marp-team/marp-core": "^1.4.3",
+    "serve": "^11.3.2",
+    "tiny-slider": "^2.9.3"
+  }
+}
