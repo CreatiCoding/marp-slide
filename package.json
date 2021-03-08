@@ -1,11 +1,11 @@
 {
   "name": "marp-slide",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "VanillaJS Component for Marp and Tiny Slider",
   "main": "marp-slide.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify -p tinyify ./marp-slide.js -o ./dist/marp-slide.min.js",
+    "build": "browserify ./marp-slide.js -o ./dist/marp-slide.min.js",
     "start": "serve .",
     "clean": "rm -rf yarn.lock"
   },

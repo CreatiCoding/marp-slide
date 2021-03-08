@@ -4,7 +4,7 @@ Example VanillaJS Component for Marp and Tiny Slider
 
 ## demo
 
-https://unpkg.com/marp-slide@0.0.3/demo.html
+https://unpkg.com/marp-slide@0.0.4/demo.html
 
 ## usage
 
