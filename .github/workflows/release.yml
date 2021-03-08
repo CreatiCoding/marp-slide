@@ -13,6 +13,7 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: yarn install
+      - run: yarn global add browserify
       - run: yarn build
       - run: yarn clean
       - name: npm whoami
