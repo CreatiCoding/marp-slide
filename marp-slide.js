@@ -27,7 +27,13 @@ const load = function (v, t = "script", k = "src", e) {
 };
 
 const Marp = require("@marp-team/marp-core");
-function MarpSlide({ $target, contents, marpOption, tnsOption, mounted }) {
+function MarpSlide({
+  $target,
+  contents,
+  marpOption,
+  tnsOption,
+  mounted = () => {},
+}) {
   if (!marpOption) {
     marpOption = {};
   }
