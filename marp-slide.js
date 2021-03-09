@@ -51,6 +51,9 @@ function MarpSlide({ $target, contents, marpOption, tnsOption }) {
         "//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"
       );
       await load(
+        "//cdn.jsdelivr.net/npm/@marp-team/marpit-svg-polyfill/lib/polyfill.browser.js"
+      );
+      await load(
         "//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.min.css",
         "link",
         "href",
