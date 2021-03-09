@@ -48,10 +48,10 @@ function MarpSlide({ $target, contents, marpOption, tnsOption }) {
     },
     async render() {
       await load(
-        "//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"
+        "//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"
       );
       await load(
-        "//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css",
+        "//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.min.css",
         "link",
         "href",
         ["rel", "stylesheet"]
