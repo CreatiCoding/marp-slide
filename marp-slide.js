@@ -27,7 +27,7 @@ const load = function (v, t = "script", k = "src", e) {
 };
 
 const Marp = require("@marp-team/marp-core");
-function MarpSlide({ $target, contents, marpOption, tnsOption }) {
+function MarpSlide({ $target, contents, marpOption, tnsOption, mounted }) {
   if (!marpOption) {
     marpOption = {};
   }
@@ -71,7 +71,9 @@ function MarpSlide({ $target, contents, marpOption, tnsOption }) {
     },
   };
 
-  self.render();
+  self.render().then(() => {
+    mounted();
+  });
   return self;
 }
 if (isBrowser) {

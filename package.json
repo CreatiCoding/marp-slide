@@ -1,6 +1,6 @@
 {
   "name": "marp-slide",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "VanillaJS Component for Marp and Tiny Slider",
   "main": "marp-slide.js",
   "scripts": {
