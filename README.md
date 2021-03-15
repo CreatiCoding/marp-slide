@@ -11,7 +11,7 @@ https://unpkg.com/marp-slide@latest/demo.html
 ```html
 <body>
   <div class="marp-slide"></div>
-  <script src="//unpkg.com/marp-slide@0.0.8/dist/marp-slide.min.js"></script>
+  <script src="//unpkg.com/marp-slide@latest/dist/marp-slide.min.js"></script>
   <script>
     const contents = [
       `# 🧑‍💻 Frontend & DevOps Developer `,
