@@ -10,7 +10,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Demo</title>
+    <title>Marp Slider</title>
     <link
       rel="shortcut icon"
       href="https://avatars.githubusercontent.com/u/33514304?s=50&amp;u=6b3e225b0b128d06895364b27b6598c119a39b77&amp;v=4"
@@ -24,28 +24,27 @@
   <body>
     <div class="marp-slide"></div>
     <script>
-      const contents = [
-        `# 🧑‍💻 Frontend & DevOps Developer `,
-        `[Creco](https://creco.today) [CreatiCoding(Jeong Seok Ho)](https://github.com/CreatiCoding)`,
-        `---`,
-        `# 🌠 Online Marp Slide Show`,
-        `HaHaHa`,
-        `---`,
-        `# 🆓 Feel free`,
-        `Just use it`,
-        `---`,
-        `# 😉 Have a nice day`,
-        `https://creco.today`,
-      ].join("\n\n");
-      new MarpSlide({
-        $target: document.querySelector(".marp-slide"),
-        contents,
-        mounted: () => {
-          document.querySelectorAll("a").forEach((item) => {
-            item.target = "_parent";
-          });
-        },
-      });
+      (function () {
+        if (!window.location.search.split("?")[1]) {
+          return;
+        }
+        const query = window.location.search
+          .split("?")[1]
+          .split("&")
+          .map((e) => e.split("="))
+          .reduce((a, c) => ({ ...a, [c[0]]: c[1] }), {});
+        if (query && query.url) {
+          console.log(query.url);
+          fetch(query.url)
+            .then((e) => e.text())
+            .then((contents) => {
+              new MarpSlide({
+                $target: document.querySelector(".marp-slide"),
+                contents,
+              });
+            });
+        }
+      })();
     </script>
   </body>
 </html>
